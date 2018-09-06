@@ -18,10 +18,26 @@ describe ('list length and instantiation', () => {
 })
 
 describe ('list push method', () => {
-  test('shows adding initial item to list at index 0',() => {
-    let actual = new List
+  test('shows object is instantiated with item and length',() => {
+    let actual = new List;
     actual.push('Hello');
     let expectedValue = { 0: 'Hello', length: 1};
     expect(actual).toEqual(expectedValue);
   })
+
+  test('shows item added to bottom of object', () => {
+    let listFive = new List;
+    for (let i = 0; i < 5; i++){
+      listFive.push(i);
+    }
+
+    let actual = listFive.length;
+    let expectedValue = 5;
+    expect(actual).toEqual(expectedValue); 
+
+    actual = listFive[4];
+    expectedValue = 4
+    expect(actual).toBe(expectedValue);
+  })
+
 })
