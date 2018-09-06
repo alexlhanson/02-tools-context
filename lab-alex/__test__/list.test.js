@@ -5,7 +5,7 @@ const List = require('../lib/list.js');
 //create base instance for testing
 let testCase = new List;
 for (let i = 0; i < 5; i++){
-  testCase.push(i);
+  testCase.push(i + 5);
 }
 
 let emptyCase = new List;
@@ -46,7 +46,7 @@ describe ('list push method', () => {
     expect(actual).toEqual(expectedValue); 
 
     actual = testCase[4];
-    expectedValue = 4
+    expectedValue = 9
     expect(actual).toBe(expectedValue);
   })
 
@@ -59,7 +59,7 @@ describe ('list pop method', () => {
   test('shows object removes the last item',() => {
     let popTestCase = testCase;
     let actual = popTestCase.pop();  
-    let expectedValue = 4;
+    let expectedValue = 9;
     expect(actual).toEqual(expectedValue);
   })
 
@@ -70,3 +70,42 @@ describe ('list pop method', () => {
   })
 
 })
+
+/********************************************************************************
+*         slice Tests                                                           *
+********************************************************************************/
+
+describe ('list slice method', () => {
+
+  test('shows list from start to end',() => {
+    let sliceTestCase = testCase.slice(0, 2);
+    let actual = sliceTestCase.length
+    let expectedValue = 2;
+    expect(actual).toEqual(expectedValue);
+  })
+
+  test('shows list from start to end',() => {
+    let sliceTestCase = testCase.slice(2, 4);
+    let actual = sliceTestCase.length
+    let expectedValue = 2;
+    expect(actual).toEqual(expectedValue);
+  })
+})
+
+/********************************************************************************
+*         forEach Tests                                                         *
+********************************************************************************/
+
+
+
+/********************************************************************************
+*         map Tests                                                             *
+********************************************************************************/
+
+/********************************************************************************
+*         filter Tests                                                          *
+********************************************************************************/
+
+/********************************************************************************
+*         reduce Tests                                                          *
+********************************************************************************/
