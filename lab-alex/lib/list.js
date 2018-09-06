@@ -5,8 +5,12 @@ class List {
     //length parameter
     this.length = 0;
   }
-    
     //push method
+  push(item){
+    this[this.length] = item;
+    this.length++;
+    return this.length
+  }
     
     //pop method
     
