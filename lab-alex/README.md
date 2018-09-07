@@ -1,4 +1,4 @@
-https://travis-ci.org/alexlhanson/02-tools-context.svg?branch=master
+[![Build Status](https://travis-ci.org/alexlhanson/02-tools-context.svg?branch=master)](https://travis-ci.org/alexlhanson/02-tools-context)
 # Create a List and Tools
 ## Length
 The length parameter is set to 0 on initialization and increases or decreases as the methods change the values and parameters in the list instance.
