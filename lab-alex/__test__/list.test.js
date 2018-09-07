@@ -102,6 +102,15 @@ describe ('list slice method', () => {
 *         map Tests                                                             *
 ********************************************************************************/
 
+describe('list map method', () => {
+  test('show map with doubling', () => {
+    let mapTestCase = testCase.map(x => x * 2);
+    let actual = mapTestCase[0];
+    let expectedValue = testCase[0] * 2;
+    expect(actual).toEqual(expectedValue)
+  })
+})
+
 /********************************************************************************
 *         filter Tests                                                          *
 ********************************************************************************/

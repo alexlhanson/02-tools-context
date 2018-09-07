@@ -30,11 +30,9 @@ class List {
       end = this.length - 1;
     }
 
-    console.log(this);
     for (let i = start; i < end; i++){
       slicedList.push(this[i])
     }
-    // console.log(slicedList);
 
     slicedList.length = end - start;
     return slicedList;
@@ -43,6 +41,14 @@ class List {
   //forEach method
 
   //map method
+
+  map (callback) {
+    let mappedList = new List;
+    for(let i = 0; i < this.length; i++){
+      mappedList.push(callback(this[i], i, this))
+    }
+    return mappedList;
+  }
 
   //filter method
 
