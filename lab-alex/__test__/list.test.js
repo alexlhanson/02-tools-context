@@ -134,7 +134,6 @@ describe('list map method', () => {
 describe ('list filter method', () => {
   test('should show filtering for numbers over 7', () => {
     let filterTestCase = testCase.filter(item => item > 6);
-    console.log(filterTestCase)
     let actual = filterTestCase[0];
     let expectedValue = 7;
     expect(actual).toEqual(expectedValue);
@@ -144,3 +143,12 @@ describe ('list filter method', () => {
 /********************************************************************************
 *         reduce Tests                                                          *
 ********************************************************************************/
+
+  describe ('list reduce method', () => {
+    test('should show reduce adding together each value', () => {
+      let actual = testCase.reduce ((acc, curr) => acc + curr);
+      let expectedValue = 26;
+      expect(actual).toEqual(expectedValue);
+    })
+
+  })

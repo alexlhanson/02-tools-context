@@ -58,7 +58,6 @@ class List {
 
   filter (callback) {
     let filteredList = new List;
-    console.log(this);
     this.forEach( item => {
       if (callback(item) === true){
         filteredList.push(item);
@@ -68,6 +67,13 @@ class List {
   }
 
   //reduce method
+  reduce (reducer) {
+    let accumulator = 0;
+    for (let i = 0; i < this.length; i++){
+      accumulator = reducer(accumulator, this[i], i, this);
+    }
+    return accumulator;
+  }
 
 }
 
