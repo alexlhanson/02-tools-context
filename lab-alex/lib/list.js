@@ -39,7 +39,11 @@ class List {
   }
 
   //forEach method
-
+  forEach (callback) {
+    for(let i = 0; i < this.length; i++){
+      callback(this[i], i, this);
+    }    
+  }
   //map method
 
   map (callback) {

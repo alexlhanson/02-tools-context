@@ -96,7 +96,16 @@ describe ('list slice method', () => {
 *         forEach Tests                                                         *
 ********************************************************************************/
 
+describe('list forEach method', () => {
+  test('show map with doubling', () => {
+    let forEachTestCase = new List;
+    testCase.forEach(x => forEachTestCase.push(x * 2))
 
+    let actual = forEachTestCase[0];
+    let expectedValue = testCase[0] * 2;
+    expect(actual).toEqual(expectedValue)
+  })
+})
 
 /********************************************************************************
 *         map Tests                                                             *
@@ -107,6 +116,13 @@ describe('list map method', () => {
     let mapTestCase = testCase.map(x => x * 2);
     let actual = mapTestCase[0];
     let expectedValue = testCase[0] * 2;
+    expect(actual).toEqual(expectedValue)
+  })
+
+  test('show map with squaring', () => {
+    let mapTestCase = testCase.map(x => x ** 2);
+    let actual = mapTestCase[0];
+    let expectedValue = testCase[0] ** 2;
     expect(actual).toEqual(expectedValue)
   })
 })
