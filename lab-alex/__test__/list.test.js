@@ -112,14 +112,14 @@ describe('list forEach method', () => {
 ********************************************************************************/
 
 describe('list map method', () => {
-  test('show map with doubling', () => {
+  test('should show map with doubling', () => {
     let mapTestCase = testCase.map(x => x * 2);
     let actual = mapTestCase[0];
     let expectedValue = testCase[0] * 2;
     expect(actual).toEqual(expectedValue)
   })
 
-  test('show map with squaring', () => {
+  test('should show map with squaring', () => {
     let mapTestCase = testCase.map(x => x ** 2);
     let actual = mapTestCase[0];
     let expectedValue = testCase[0] ** 2;
@@ -130,6 +130,16 @@ describe('list map method', () => {
 /********************************************************************************
 *         filter Tests                                                          *
 ********************************************************************************/
+
+describe ('list filter method', () => {
+  test('should show filtering for numbers over 7', () => {
+    let filterTestCase = testCase.filter(item => item > 6);
+    console.log(filterTestCase)
+    let actual = filterTestCase[0];
+    let expectedValue = 7;
+    expect(actual).toEqual(expectedValue);
+  })
+})
 
 /********************************************************************************
 *         reduce Tests                                                          *

@@ -56,6 +56,17 @@ class List {
 
   //filter method
 
+  filter (callback) {
+    let filteredList = new List;
+    console.log(this);
+    this.forEach( item => {
+      if (callback(item) === true){
+        filteredList.push(item);
+      }
+    })
+    return filteredList;
+  }
+
   //reduce method
 
 }
